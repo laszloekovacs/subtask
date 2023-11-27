@@ -16,8 +16,6 @@ const DebugHeader = () => {
     <section className="row gap-2">
       <div>
         <Link to="/login">login</Link>
-        <Link to="/auth/logout">logout</Link>
-        <Link to="/register">register</Link>
       </div>
       <details>
         <summary>profile</summary>

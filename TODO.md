@@ -21,6 +21,6 @@
 [X] create a logout that removes the session
 [X] add auth0 tenant, get id, secret
 [X] double check auth0 env variables
-
+[] write proper README
 [] create a module that asserts env variables
 [] add register page

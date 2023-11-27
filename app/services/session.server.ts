@@ -1,5 +1,6 @@
 import { createCookieSessionStorage } from '@remix-run/node'
 
+// session storage, sets cookies on user browser
 export let sessionStorage = createCookieSessionStorage({
   cookie: {
     name: '__subtask_session',

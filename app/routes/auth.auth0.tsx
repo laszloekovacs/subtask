@@ -1,10 +1,13 @@
-// app/routes/auth/auth0.tsx
-import { redirect, type ActionFunctionArgs } from '@remix-run/node'
+import type { LoaderFunctionArgs, ActionFunctionArgs } from '@remix-run/node'
+import { redirect } from '@remix-run/node'
 import { authenticator } from '~/services/auth.server'
 
-export const loader = () => redirect('/login')
+// return if we got here by GET
+export const loader = async ({ request }: LoaderFunctionArgs) => {
+  return redirect('/')
+}
 
-/* i'm guessing this is where auth0 posts */
-export const action = ({ request }: ActionFunctionArgs) => {
+// POST handler initialized by the user
+export const action = async ({ request }: ActionFunctionArgs) => {
   return authenticator.authenticate('auth0', request)
 }
