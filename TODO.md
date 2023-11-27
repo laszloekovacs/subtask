@@ -23,4 +23,5 @@
 [X] double check auth0 env variables
 [] write proper README
 [] create a module that asserts env variables
-[] add register page
+[] create a profile dropdown
+[] profile name in the header

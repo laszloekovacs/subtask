@@ -1,7 +1,22 @@
-import React from 'react'
+import { json, type LoaderFunction } from '@remix-run/node'
+import { useLoaderData } from '@remix-run/react'
+import { getSession } from '~/services/session.server'
+import { authenticator as auth } from '~/services/auth.server'
+
+export const loader: LoaderFunction = async ({ request }) => {
+  const user = await auth.isAuthenticated(request, {
+    successRedirect: '/private',
+  })
+  const session = await getSession(request.headers.get('Cookie'))
+
+  return json({ session, user })
+}
 
 /* holds logo and login / logout button  */
 const Header = () => {
+  const data = useLoaderData<typeof loader>()
+  console.log(data)
+
   return (
     <>
       <section className="row space-between header">
