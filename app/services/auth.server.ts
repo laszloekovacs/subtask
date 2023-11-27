@@ -1,13 +1,7 @@
-import assert from 'assert'
 import { Authenticator } from 'remix-auth'
 import { Auth0Strategy } from 'remix-auth-auth0'
 import { sessionStorage } from './session.server'
 import chalk from 'chalk'
-
-assert(process.env.AUTH_CALLBACK)
-assert(process.env.AUTH_CLIENT_ID)
-assert(process.env.AUTH_CLIENT_SECRET)
-assert(process.env.AUTH_DOMAIN)
 
 export const authenticator = new Authenticator<string>(sessionStorage)
 

@@ -1,4 +1,5 @@
 import type { MetaFunction } from '@remix-run/node'
+import DebugHeader from '~/components/DebugHeader'
 import Header from '~/components/Header'
 
 export const meta: MetaFunction = () => {
@@ -11,6 +12,7 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <div className="container">
+      <DebugHeader />
       <Header />
     </div>
   )

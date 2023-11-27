@@ -35,3 +35,7 @@ body {
 .header {
   background-color: cadetblue;
 }
+
+.gap-2 {
+  gap: 2rem;
+}
