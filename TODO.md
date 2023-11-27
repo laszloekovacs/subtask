@@ -17,6 +17,9 @@
 
 [X] add session storage
 [X] add authenticator
-[] add auth strategy (auth0 or github)
+[X] add auth strategy (auth0 or github)
+[X] auth endpoint, callback
+
+[] create a logout that removes the session
 [] add login page
 [] add auth0 tenant, get id, secret

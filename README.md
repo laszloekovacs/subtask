@@ -39,3 +39,4 @@ Make sure to deploy the output of `remix build`
 
 remix auth
 https://github.com/sergiodxa/remix-auth
+https://github.com/danestves/remix-auth-auth0
