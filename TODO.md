@@ -25,3 +25,6 @@
 [] create a module that asserts env variables
 [] create a profile dropdown
 [] profile name in the header
+[] fix missing user account
+
+[] fancy error page
