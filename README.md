@@ -36,3 +36,6 @@ Make sure to deploy the output of `remix build`
 
 - `build/`
 - `public/build/`
+
+remix auth
+https://github.com/sergiodxa/remix-auth
