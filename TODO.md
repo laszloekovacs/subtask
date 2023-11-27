@@ -6,7 +6,6 @@
 - users can edit tasks
 - users can delete tasks
 - users can have private and public tasks
-
 - the index page shows all users projects, and public projects
 
 ## IN PROGRESS
@@ -19,7 +18,9 @@
 [X] add authenticator
 [X] add auth strategy (auth0 or github)
 [X] auth endpoint, callback
+[X] create a logout that removes the session
+[X] add auth0 tenant, get id, secret
+[X] double check auth0 env variables
 
-[] create a logout that removes the session
-[] add login page
-[] add auth0 tenant, get id, secret
+[] create a module that asserts env variables
+[] add register page

@@ -4,19 +4,19 @@ import { Auth0Strategy } from 'remix-auth-auth0'
 import { sessionStorage } from './session.server'
 import chalk from 'chalk'
 
-assert(process.env.CALLBACK)
-assert(process.env.CLIENT_ID)
-assert(process.env.CLIENT_SECRET)
-assert(process.env.DOMAIN)
+assert(process.env.AUTH_CALLBACK)
+assert(process.env.AUTH_CLIENT_ID)
+assert(process.env.AUTH_CLIENT_SECRET)
+assert(process.env.AUTH_DOMAIN)
 
 export const authenticator = new Authenticator<string>(sessionStorage)
 
 let auth0Strategy = new Auth0Strategy(
   {
-    callbackURL: process.env.CALLBACK!,
-    clientID: process.env.CLIENT_ID!,
-    clientSecret: process.env.CLIENT_SECRET!,
-    domain: process.env.DOMAIN!,
+    callbackURL: process.env.AUTH_CALLBACK!,
+    clientID: process.env.AUTH_CLIENT_ID!,
+    clientSecret: process.env.AUTH_CLIENT_SECRET!,
+    domain: process.env.AUTH_DOMAIN!,
   },
 
   async ({ accessToken, refreshToken, extraParams, profile }) => {
