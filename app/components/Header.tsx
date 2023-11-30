@@ -24,7 +24,7 @@ const Header = () => {
           <img src="subtask-logo.jpg" alt="subtask logo" height={'100px'} />
         </div>
         <div>
-          <button>login / logout</button>
+          <button className="btn btn-outline-primary">login / logout</button>
         </div>
       </section>
     </>
