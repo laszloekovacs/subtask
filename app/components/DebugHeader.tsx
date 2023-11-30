@@ -3,8 +3,8 @@ import { Link, useLoaderData } from '@remix-run/react'
 import { json, type LoaderFunction } from '@remix-run/node'
 import { getSession } from '~/services/session.server'
 
-export const loader: LoaderFunction = (params) => {
-  const session = getSession(params.request.headers.get('Cookie'))
+export const loader: LoaderFunction = async (params) => {
+  const session = await getSession(params.request.headers.get('Cookie'))
 
   return json(session)
 }

@@ -3,7 +3,7 @@ import { Auth0Strategy } from 'remix-auth-auth0'
 import { sessionStorage } from './session.server'
 
 // creates the authentication handler
-export const authenticator = new Authenticator<unknown>(sessionStorage)
+export const authenticator = new Authenticator<string>(sessionStorage)
 
 let auth0Strategy = new Auth0Strategy(
   {
@@ -17,13 +17,8 @@ let auth0Strategy = new Auth0Strategy(
     //return User.findOrCreate({ email: profile.emails[0].value });
     console.log('what is happening here')
 
-    return {
-      accessToken,
-      refreshToken,
-      extraParams,
-      profile,
-    }
+    return 'userdbobjectid'
   }
 )
 
-authenticator.use(auth0Strategy)
+authenticator.use(auth0Strategy, 'auth0')
